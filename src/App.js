@@ -1,8 +1,10 @@
+import Header from './components/Header';
+
 function App() {
     return (
         <>
             <div className="container">
-                <h1>React Bootstrap Sass Broilerplate</h1>
+                <Header />
             </div>
         </>
     );

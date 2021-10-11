@@ -3381,3 +3381,188 @@ Copyright (c) 2015 Daniel Eden
         opacity: 1;
     }
 }
+
+//  Background Image Animations
+@keyframes left-to-right {
+    0% {
+        background-position: left center;
+    }
+    100% {
+        background-position: right center;
+    }
+}
+
+@keyframes right-to-left {
+    0% {
+        background-position: right center;
+    }
+    100% {
+        background-position: left center;
+    }
+}
+
+@keyframes left-to-center {
+    0% {
+        background-position: left center;
+    }
+    100% {
+        background-position: center center;
+    }
+}
+
+@keyframes right-to-center {
+    0% {
+        background-position: right center;
+    }
+    100% {
+        background-position: center center;
+    }
+}
+
+@keyframes top-to-bottom {
+    0% {
+        background-position: center top;
+    }
+    100% {
+        background-position: center bottom;
+    }
+}
+
+@keyframes top-to-center {
+    0% {
+        background-position: center top;
+    }
+    100% {
+        background-position: center center;
+    }
+}
+
+@keyframes bottom-to-top {
+    0% {
+        background-position: center bottom;
+    }
+    100% {
+        background-position: center top;
+    }
+}
+
+@keyframes bottom-to-center {
+    0% {
+        background-position: center bottom;
+    }
+    100% {
+        background-position: center center;
+    }
+}
+
+@keyframes top-left-to-bottom-right {
+    0% {
+        background-position: left top;
+    }
+    100% {
+        background-position: right bottom;
+    }
+}
+
+@keyframes top-left-to-center {
+    0% {
+        background-position: left top;
+    }
+    100% {
+        background-position: center center;
+    }
+}
+
+@keyframes top-right-to-bottom-left {
+    0% {
+        background-position: right top;
+    }
+    100% {
+        background-position: left bottom;
+    }
+}
+
+@keyframes top-right-to-center {
+    0% {
+        background-position: right top;
+    }
+    100% {
+        background-position: center center;
+    }
+}
+
+@keyframes bottom-left-to-top-right {
+    0% {
+        background-position: left bottom;
+    }
+    100% {
+        background-position: right top;
+    }
+}
+
+@keyframes bottom-left-to-center {
+    0% {
+        background-position: left bottom;
+    }
+    100% {
+        background-position: center center;
+    }
+}
+
+@keyframes bottom-right-to-top-left {
+    0% {
+        background-position: right bottom;
+    }
+    100% {
+        background-position: left top;
+    }
+}
+
+@keyframes bottom-right-to-center {
+    0% {
+        background-position: right bottom;
+    }
+    100% {
+        background-position: center center;
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        background-position: right center;
+    }
+    100% {
+        background-position: left center;
+    }
+}
+
+$animation-list: (
+    left-to-right left center,
+    right-to-left right center,
+    left-to-center left center,
+    right-to-center right center,
+    top-to-bottom center top,
+    top-to-center center top,
+    bottom-to-top center bottom,
+    bottom-to-center center bottom,
+    top-left-to-bottom-right left top,
+    top-left-to-center left top,
+    top-right-to-bottom-left right top,
+    top-right-to-center right top,
+    bottom-left-to-top-right left bottom,
+    bottom-left-to-center left bottom,
+    bottom-right-to-top-left right bottom,
+    bottom-right-to-center right bottom
+);
+
+@each $animation-name, $animation-start-x, $animation-start-y in $animation-list {
+    .animation {
+        &_#{$animation-name} {
+            background-position: #{$animation-start-x} #{$animation-start-y};
+
+            .active & {
+                animation: #{$animation-name} 5s ease 0s 1 normal forwards running;
+            }
+        }
+    }
+}

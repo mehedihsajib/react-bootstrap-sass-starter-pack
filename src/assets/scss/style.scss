@@ -68,11 +68,11 @@
     Default Styles
 ***************************************/
 @import "default/variables";
-@import "default/mixins";
 @import "default/reset";
 @import "default/typography";
+@import "default/helper";
+@import "default/mixins";
 @import "default/animations";
-@import "default/spacing";
 
 /**************************************
     Header Styles
@@ -82,14 +82,12 @@
 /**************************************
     Inner Styles
 ***************************************/
+@import "common/common";
 
 /**************************************
     Elements Styles
 ***************************************/
-
-/**************************************
-    Blog Styles
-***************************************/
+@import "elements/buttons";
 
 /**************************************
     Footer Styles
