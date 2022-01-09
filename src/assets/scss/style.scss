@@ -1,6 +1,6 @@
 /*********************************************************************************
 
-	Template Name: Trydo React Degital Agency Template
+	Template Name: 
 	Note: This is style css.
 
 **********************************************************************************/
@@ -12,13 +12,7 @@
 	|
 	|___ Default Styles
 	|	|
-	|	|___ variables
-	|	|___ mixins
-	|	|___ reset
-	|	|___ typography
-	|	|___ extend
-	|	|___ animations
-	|	|___ shortcode
+	|	|	|___ shortcode
 	|	|___ spacing
 	|
 	|
@@ -60,40 +54,33 @@
 	|	|___ preview
 	|
 	|
-	|___ END STYLESHEET INDEXING
+	|___ END STYLESHEET INDEXING	|___ variables
+	|	|___ mixins
+	|	|___ reset
+	|	|___ typography
+	|	|___ extend
+	|	|___ animations
+
 
 ***************************************************************/
 
 /**************************************
     Default Styles
 ***************************************/
-@import "default/variables";
-@import "default/reset";
-@import "default/typography";
-@import "default/helper";
-@import "default/mixins";
-@import "default/animations";
+@import "./default/variables";
+@import "./default/reset";
+@import "./default/typography";
+@import "./default/helper";
+@import "./default/mixins";
+@import "./default/animations";
 
 /**************************************
-    Header Styles
+    Commos Styles
 ***************************************/
-@import "header/header";
-
-/**************************************
-    Inner Styles
-***************************************/
-@import "common/common";
+@import "./common/common";
 
 /**************************************
     Elements Styles
 ***************************************/
-@import "elements/buttons";
-
-/**************************************
-    Footer Styles
-***************************************/
-@import "footer/footer";
-
-/**************************************
-    Template Styles
-***************************************/
+@import "./elements/header";
+@import "./elements/footer";
